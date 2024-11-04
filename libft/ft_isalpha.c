@@ -6,11 +6,11 @@
 /*   By: tsomacha <tsomacha@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 13:34:28 by tsomacha          #+#    #+#             */
-/*   Updated: 2024/11/03 14:29:27 by tsomacha         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:19:59 by tsomacha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(long int param)
+int	ft_isalpha(long int param)
 {
 	if ((param >= 65 && param <= 90) || (param >= 97 && param <= 122))
 		return (1);
