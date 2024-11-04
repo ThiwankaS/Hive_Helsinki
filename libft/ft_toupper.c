@@ -1,11 +1,23 @@
-int ft_toupper(long int param)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tsomacha <tsomacha@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/04 16:27:30 by tsomacha          #+#    #+#             */
+/*   Updated: 2024/11/04 16:27:32 by tsomacha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_toupper(long int param)
 {
-    if (param >= 97 && param <= 122)
-    {
-        return (param - 32);
-    }
-    else
-    {
-        return (param);
-    }
+	if (param >= 97 && param <= 122)
+	{
+		return (param - 32);
+	}
+	else
+	{
+		return (param);
+	}
 }
