@@ -11,10 +11,17 @@
 /* ************************************************************************** */
 
 #ifndef FT_LIBFT
-# define FT_LIBFT
+#define FT_LIBFT
 
-# include <stdio.h>
+int ft_isalpha(long int param);
+int ft_isdigit(long int param);
+int ft_isalnum(long int param);
+int ft_isascii(long int param);
+int ft_isprint(long int param);
+int ft_toupper(long int param);
+int ft_tolower(long int param);
 
-int	ft_isalpha(int letter);
+unsigned int ft_strlen(const char *str);
+const char *ft_strchr(const char *str, int param);
 
 #endif

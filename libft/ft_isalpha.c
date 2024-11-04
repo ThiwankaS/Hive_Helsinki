@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(long int letter)
+int ft_isalpha(long int param)
 {
-	if ((letter >= 65 && letter <= 90) || (letter >= 97 && letter <= 122))
+	if ((param >= 65 && param <= 90) || (param >= 97 && param <= 122))
 		return (1);
 	else
 		return (0);
