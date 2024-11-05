@@ -24,4 +24,6 @@ int ft_tolower(long int param);
 unsigned int ft_strlen(const char *str);
 const char *ft_strchr(const char *str, int param);
 
+int ft_strncmp(const char *str1, const char *str2, unsigned int size);
+
 #endif
