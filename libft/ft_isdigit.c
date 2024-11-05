@@ -1,11 +1,23 @@
-int ft_isdigit(long int param)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tsomacha <tsomacha@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/04 16:21:11 by tsomacha          #+#    #+#             */
+/*   Updated: 2024/11/04 16:21:27 by tsomacha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_isdigit(long int param)
 {
-    if (param >= 48 && param <= 57)
-    {
-        return (1);
-    }
-    else
-    {
-        return (0);
-    }
+	if (param >= 48 && param <= 57)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

@@ -1,11 +1,23 @@
-int ft_tolower(long int param)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tsomacha <tsomacha@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/04 16:26:57 by tsomacha          #+#    #+#             */
+/*   Updated: 2024/11/04 16:26:59 by tsomacha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_tolower(long int param)
 {
-    if (param >= 65 && param <= 90)
-    {
-        return (param + 32);
-    }
-    else
-    {
-        return (param);
-    }
+	if (param >= 65 && param <= 90)
+	{
+		return (param + 32);
+	}
+	else
+	{
+		return (param);
+	}
 }

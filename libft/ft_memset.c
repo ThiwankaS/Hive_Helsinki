@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsomacha <tsomacha@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 16:22:27 by tsomacha          #+#    #+#             */
-/*   Updated: 2024/11/04 16:22:41 by tsomacha         ###   ########.fr       */
+/*   Created: 2024/11/04 16:54:26 by tsomacha          #+#    #+#             */
+/*   Updated: 2024/11/04 19:22:45 by tsomacha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-const char	*ft_strchr(const char *str, int param)
+void	*ft_memset(void *s, int c, unsigned int size)
 {
-	while (*str)
+	unsigned char	*ptr;
+	unsigned int	count;
+
+	ptr = (unsigned char *)s;
+	count = 0;
+	while (count < size)
 	{
-		if (*str == param)
-		{
-			return (str);
-		}
-		str++;
+		*(ptr + count) = c;
+		count++;
 	}
-	return ((char *)0);
+	return (s);
 }

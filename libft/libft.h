@@ -6,7 +6,7 @@
 /*   By: tsomacha <tsomacha@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 11:40:52 by tsomacha          #+#    #+#             */
-/*   Updated: 2024/11/03 13:30:58 by tsomacha         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:26:20 by tsomacha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int ft_tolower(long int param);
 
 unsigned int ft_strlen(const char *str);
 const char *ft_strchr(const char *str, int param);
+void *ft_memset(void *s, int c, unsigned int size);
 
 int ft_strncmp(const char *str1, const char *str2, unsigned int size);
 
