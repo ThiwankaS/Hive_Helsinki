@@ -6,13 +6,15 @@
 /*   By: tsomacha <tsomacha@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:24:55 by tsomacha          #+#    #+#             */
-/*   Updated: 2024/11/04 16:24:57 by tsomacha         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:54:08 by tsomacha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *str1, const char *str2, unsigned int size)
+#include "libft.h"
+
+int	ft_strncmp(const char *str1, const char *str2, size_t size)
 {
-	unsigned int	count;
+	size_t	count;
 
 	count = 0;
 	while ((*(str1 + count) || *(str2 + count)) && (count < size))

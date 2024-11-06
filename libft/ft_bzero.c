@@ -6,14 +6,16 @@
 /*   By: tsomacha <tsomacha@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 18:06:11 by tsomacha          #+#    #+#             */
-/*   Updated: 2024/11/05 18:48:57 by tsomacha         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:51:28 by tsomacha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void *s, unsigned int size)
+#include "libft.h"
+
+void	*ft_bzero(void *s, size_t size)
 {
 	unsigned char	*ptr;
-	unsigned int	count;
+	size_t	count;
 
 	ptr = (unsigned char *)s;
 	count = 0;

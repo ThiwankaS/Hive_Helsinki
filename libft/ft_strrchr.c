@@ -6,15 +6,17 @@
 /*   By: tsomacha <tsomacha@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:05:19 by tsomacha          #+#    #+#             */
-/*   Updated: 2024/11/05 17:42:56 by tsomacha         ###   ########.fr       */
+/*   Updated: 2024/11/06 17:01:08 by tsomacha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
 	char *ptr;
 
-	ptr = (char *)0;
+	ptr = NULL;
 	while (*s)
 	{
 		if (*s == c)

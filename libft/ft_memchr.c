@@ -6,14 +6,16 @@
 /*   By: tsomacha <tsomacha@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 18:49:38 by tsomacha          #+#    #+#             */
-/*   Updated: 2024/11/05 18:53:24 by tsomacha         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:52:23 by tsomacha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(const void *s, int c, unsigned int size)
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t size)
 {
 	char	*str;
-	unsigned int	count;
+	size_t	count;
 
 	count = 0;
 	str = (char *)s;
@@ -23,5 +25,5 @@ void	*ft_memchr(const void *s, int c, unsigned int size)
 			return ((char *)s + count);
 		count++;
 	}
-	return ((char *)0);
+	return (NULL);
 }
