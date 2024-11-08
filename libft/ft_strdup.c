@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsomacha <tsomacha@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 17:05:19 by tsomacha          #+#    #+#             */
-/*   Updated: 2024/11/08 20:21:49 by tsomacha         ###   ########.fr       */
+/*   Created: 2024/11/08 17:00:25 by tsomacha          #+#    #+#             */
+/*   Updated: 2024/11/08 17:02:00 by tsomacha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int param)
+char	*ft_strdup(const char *s)
 {
-	char *ptr;
+	int		count;
+	int		len;
+	char	*str;
 
-	ptr = NULL;
-	while (*s)
+	count = 0;
+	len = ft_strlen(s);
+	str = (char *)malloc(sizeof(*str) * (len + 1));
+	while (count < len)
 	{
-		if (*s == param)
-			ptr = (char *)s;
-		s++;
+		str[count] = s[count];
+		count++;
 	}
-	return (ptr);
+	str[count] = '\0';
+	return (str);
 }

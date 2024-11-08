@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsomacha <tsomacha@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 17:05:19 by tsomacha          #+#    #+#             */
-/*   Updated: 2024/11/08 20:21:49 by tsomacha         ###   ########.fr       */
+/*   Created: 2024/11/08 17:06:01 by tsomacha          #+#    #+#             */
+/*   Updated: 2024/11/08 17:29:17 by tsomacha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int param)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *ptr;
+	size_t	count;
+	size_t	step;
+	char	*str;
 
-	ptr = NULL;
-	while (*s)
+	str = (char *)malloc(sizeof(*s) * (len + 1));
+	if (str == NULL)
+		return (NULL);
+	count = 0;
+	step = 0;
+	while (s[count])
 	{
-		if (*s == param)
-			ptr = (char *)s;
-		s++;
+		if (count >= start && step < len)
+		{
+			str[step] = s[count];
+			step++;
+		}
+		count++;
 	}
-	return (ptr);
+	str[step] = '\0';
+	return (str);
 }

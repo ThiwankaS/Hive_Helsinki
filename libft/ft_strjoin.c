@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsomacha <tsomacha@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 17:05:19 by tsomacha          #+#    #+#             */
-/*   Updated: 2024/11/08 20:21:49 by tsomacha         ###   ########.fr       */
+/*   Created: 2024/11/08 17:36:18 by tsomacha          #+#    #+#             */
+/*   Updated: 2024/11/08 17:41:48 by tsomacha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int param)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *ptr;
+	int		count;
+	int		step;
+	char	*str;
 
-	ptr = NULL;
-	while (*s)
+	count = 0;
+	step = 0;
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (str == NULL)
+		return (NULL);
+	while (s1[count] != '\0')
 	{
-		if (*s == param)
-			ptr = (char *)s;
-		s++;
+		str[count] = s1[count];
+		count++;
 	}
-	return (ptr);
+	while (s2[step] != '\0')
+	{
+		str[count + step] = s2[step];
+		step++;
+	}
+	str[count + step] = '\0';
+	return (str);
 }

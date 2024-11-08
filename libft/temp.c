@@ -4,46 +4,46 @@
 #include <string.h>
 #include "libft.h"
 
-void print_array(int *arr,int size)
+static int ft_is_removable(char c,const char *s)
 {
-	for(int i = 0;i < size; i++)
+	size_t count;
+
+	count = 0;
+	while (s[count])
 	{
-		printf("%d, ",arr[i]);
+		if(c == s[count])
+			return (1);
+		count++;
 	}
-	printf("\n");
+	return (0);
 }
 
-int check_identical(int *arr1,int *arr2, int size)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	for (int i = 0; i < size; i++) {
-        if (arr1[i] != arr2[i]) {
-            return 0; // Arrays are not equal
-        }
-    }
-    return 1; // Arrays are equal
+	size_t	count;
+	size_t	step;
+	size_t	len;
+	char	*str;
+
+	count = 0;
+	len = ft_strlen(s1);
+	step = len - 1;
+	while(s1[count] && ft_strchr(set,s1[count]))
+		count++;
+	while(s1[step] && ft_strchr(set,s1[step]) && step > count)
+		step--;
+	str = (char *)malloc(sizeof(char)*(step - count + 1));
+	if(str)
+		ft_strlcpy(str,&s1[count],(step-count + 1));
+	return(str);
 }
 
 int main(void)
 {
-	int arr1[10];
-	int arr2[10];
-	print_array(arr1,10);
-	printf("--------------------------------------\n");
-	memset(arr1,1,sizeof(arr1));//original function
-	print_array(arr1,10);
-	printf("--------------------------------------\n");
-
-	print_array(arr2,10);
-	ft_memset(arr2,1,sizeof(arr2));//libft function
-	printf("--------------------------------------\n");
-	print_array(arr2,10);
-	if(check_identical(arr1,arr2,10)==1)
-	{
-		printf("Test case: \033[37;42mPassed.\033[0m\n");
-	}
-	else
-	{
-		printf("Test case: \033[37;41mFailed.\033[0m\n");
-	}
+	char *s1 = "+++-*+Hive_+Helsinki++--**-";
+	char *s2 = "-*+";
+	char *temp = ft_strtrim(s1,s2);
+	printf("result : %s\n",temp);
+	free(temp);
 	return (0);
 }
