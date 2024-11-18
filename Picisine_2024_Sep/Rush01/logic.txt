@@ -1,0 +1,25 @@
+Case Rule = 3
+
+if box[0][0].height = 1
+	box[1][0].height = 2 || box[1][0].height = 3
+
+if box[0][0].height = 2
+	box[1][0].height = 3 || box[1][0].height = 1
+
+if box[1][0].height = 2
+	box[2][0].height = 3
+if box[1][0].height = 3
+	box[2][0].height = 4
+if box[1][0].height = 1
+	box[2][0].height = 3
+
+if box[2][0].height = 4
+	box[3][0].height = 3 || box[3][0].height = 2 || box[3][0].height = 1
+if box[2][0].height = 3
+	box[3][0].height = 4
+
+Case Rule = 4
+	if box[0][0].height = 1
+	if box[0][1].height = 2
+	if box[0][2].height = 3
+	if box[0][3].height = 4
